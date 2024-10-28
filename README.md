@@ -1,6 +1,7 @@
 # Exploratory-Data-Analysis-on-Spotify-2023-Dataset
 ## Data set was Retrieved from Kaggle ((https://www.kaggle.com/datasets/nelgiriyewithana/top-spotify-songs-2023)
 ### Author: Angostora, Tristan Zeth V. 
+### Program Adiser/s: 
 ### Section: 2ECE-D
 
 
@@ -152,27 +153,110 @@
 # ![image](https://github.com/user-attachments/assets/a798d392-5051-496f-80b9-1d5678473dff)
 #### - Based on the graph it is Stated that Mode and streams has the highest correlation 
 
+### Correlation between Danceability and Energy How about Valence and Acousticness
+#### Input:
+# ![image](https://github.com/user-attachments/assets/b7c441b3-6a07-458a-bcf6-09247ad5c8e4)
+#### - For the shown DataFrame of music, the code calculates the correlation coefficients of certain musical features between each other. Ideal, it starts by creating a list called atib, containing the attributes for danceability, energy, valence, and acousticness. Preprocessing is also applied to turn all the five attributes to actual numeric format using the pd.to_numeric() which coverts any non-numeric value to NaN in case it can’t be converted. The code then uses corrcoef to calculate correlation between danceability and energy with the result stored in corr1 and also the correlation between valence and acousticness stored in corr2. The correlation figures are arranged in a dictionary called corres, where keys are informative and explain the kind of comparisons made. Last, the result is changed to the form of DataFrame by the name rescor and it offers the correlation coefficients of the specified musical attributes in transposed form and leads to the conclusion.
+
+#### Output:
+# ![image](https://github.com/user-attachments/assets/c4f34d1f-c356-49d5-abb6-6ec4d4c4f041)
 
 
+## Platform Popularity
+### Which platform seems to favor the most popular tracks
+####  Input:
+# ![image](https://github.com/user-attachments/assets/98f490b1-d838-4b43-8dce-35963d960048)
+#### - The code snippet gives the total track count of particular music platforms where ‘total’ counts total tracks in Spotify Playlists, Spotify Charts, Apple Playlists, all listed in the DataFrame df. It then adds a total by each platform separately and stores these to count1, count2, and count3. Subsequently, a new DataFrame named plat_res is created, which contains two columns: The DSTs used are ‘platform’ in which the names of the aforementioned platforms have been listed, and ‘track_count’, which displays the total count of instances pertaining to the stated platforms. This resulting data frame gives a simplified view and quantification of how many tracks are covered across the given music platforms.
 
+#### Output:
+# ![image](https://github.com/user-attachments/assets/bc3e17b9-9f32-4de2-a89f-b15ac176193d)
 
+### Graph on Which platform favor most of the Tracks
+#### Input:
+# ![image](https://github.com/user-attachments/assets/c47780a7-a5be-4835-9fe6-08d0e8e30174)
+#### - We use Barplots for better Visualization of the Graph
+#### Output:
+# ![image](https://github.com/user-attachments/assets/e966c884-ed14-46fe-9866-b520d40cddf8)
+#### - Based on the Graph It is Clearly stated that in Spotify playlist in the one who favor Most of the Tracks
 
+## Advanced Analysis
+### Major vs. Minor
+#### Input:
+# ![image](https://github.com/user-attachments/assets/9506d22f-775f-4619-963f-cdc51f8b21f4)
+#### - In this code, I convert the DataFrame df into groups based on the musical attributes of the key and mode to count the number of tracks in df associated with each set of key and mode attributes. The groupby() function creates groups and the groups are formed based on pairs of ‘key’ and ‘mode’, size() function gives the number of entries in the particular group. This count is then reset into a new DataFrame, with the column name as ‘track_count’ the number of tracks for each key-mode combination.
 
+#### Output:
+# ![image](https://github.com/user-attachments/assets/01bdf1f1-bc94-458a-8c81-af3a07fc9c4f)
 
+### Graph of The Major and Minor 
+#### Input:
+# ![image](https://github.com/user-attachments/assets/2a249234-4bb9-462b-9b05-fd365fbe8101)
+#### The autopct parameter is worth to be mentioned; it defines how the percentage in each part of a pie chart will look like. In the format string ‘%1.1f%%’ the mandade dictates that the percentage sign should follow the value of ‘percent’ that is formatted to one decimal place. This again provides a good informative impression about the diatonic representation of the track distribution in order to make it easier for the viewer to understand the percentage per key. Last, the title “Distribution of Tracks by Key” is given and the chart is generated through plt.show().
+#### Output:
+# ![image](https://github.com/user-attachments/assets/506a8747-572d-456e-b581-ce343fba1a48)
+#### - Pie Graph for a better relationship Between The keys and The mode
+#### - Based on the Graph the one that is Dominating is C# with 14% 
 
+### Number of Major & Minor
+#### Input:
+# ![image](https://github.com/user-attachments/assets/ddabdec7-bfcc-4186-ae1f-63ab8f813f48)
+#### - The code also summarizes the total number of tracks as presented in the key_mode_counts DataFrame for each musical mode. It employs USES the groupby() feature to segment the information according the ‘mode’ column, then it adds up the ‘track_count’ of each mode.
+#### Output:
+# ![image](https://github.com/user-attachments/assets/0ccb771b-56fa-4d95-9406-d9cafa65b8ca)
 
+### Graph of Minor vs Major
+#### Input: 
+# ![image](https://github.com/user-attachments/assets/1857a67a-7a2a-4d64-88ac-495d20f00235)
+#### - Pie graph is used for uniformly Used of the graph to the said sub-question and for better Visualization of who is more Dominant
+#### Output:
+# ![image](https://github.com/user-attachments/assets/f6363773-04c7-4743-ba2c-da9d73ea0312)
+#### - The PieGraph shows that the dominant mode in terms of number of Tracks is Major
 
+### Artists consistently appear in more playlists or charts
+#### Input:
+# ![image](https://github.com/user-attachments/assets/e0a5e56d-f171-42b2-8e44-974fbf8fcea7)
+#### - The code snippet calculates the total number of tracks for each artist across multiple platforms, specifically focusing on Spotify playlists, Spotify charts, and Apple playlists. It begins by grouping the DataFrame df by the 'artist(s)_name' column and summing the counts for 'in_spotify_playlists', 'in_spotify_charts', and 'in_apple_playlists', resulting in three separate DataFrames: artist_playlist_counts, artist_chart_counts, and artist_apple_counts. These individual DataFrames are then merged into a single DataFrame, artist_counts, using the merge() function, which combines them based on the common 'artist(s)_name' column, with suffixes added for clarity. After renaming the 'in_apple_playlists' column for better understanding, the resulting DataFrame is sorted in Highest order based on the total count of tracks in Spotify playlists.
+#### Output:
+# ![image](https://github.com/user-attachments/assets/f09062fe-0390-4f0c-ae60-dc590413bc6e)
+#### - We get A sample of top 10 Artists for all Tracks
 
+### Graphing the Top 10 in each Category of Music (Spotify Playlist, Spotify charts, and Apple Playlist)
+#### Input:
+# ![image](https://github.com/user-attachments/assets/7adeeaa7-06ca-4b49-b30d-70917efd2e82)
+#### - This code targets recognizing and displaying the first ten artists in terms of tracks allowed into Spotify and Apple Music playlists. It first aggregates the original DataFrame, df, by artist names in order to get the total track count for Spotify playlists, Spotify charts, and Apple playlists, using different DataFrames. These DataFrames are then merged to form the DataFrame named artist_counts, which contains the total counts of tracks from all three sources. The code then proceeds to sort these merged results in DataFrame and find the best 10 artists for each platform, producing three separate DataFrame for Spotify playlists, Spotify chart, and Apple playlists. All of these DataFrames then set the index as artist names so that there are no problems with the plot.
+
+#### - Output:
+### For Spotify Playlist
+# ![image](https://github.com/user-attachments/assets/84fdfeb8-909a-4bce-9790-a55e961a22ae)
+#### - Number 1 on the Spotify Playlist is The Weekend
+
+### For Spotify Charts
+# ![image](https://github.com/user-attachments/assets/781db078-7e3a-4dbc-8f4c-346f36b8aa5f)
+#### - Number 1 on the Spotify Charts is Taylor Swift
+
+### For Apple Playlist
+# ![image](https://github.com/user-attachments/assets/4e009cf2-610b-4d4a-a31f-5a62999ad014)
+#### - Number 1 on the Apple Playlist is also Taylor Swift
 
 
 
 
 
 ## Revisions
-#### - Adding 'encoding='ISO-8859-1' to the read the data set this was figured out by using chatgpt
-#### - Reivions of the code in the Overview of Dataset 
-#### - Revisions on the Basic Statistics where 'Error Coerce' was added to translate the string into numeric type. This was figured out by using ChatGPT
-#### - Revision of the plots on Released_year and artist count and making it subplots instead of 1 by 1 of plots
-#### - Adding how to get the Outliers
-#### - Determining and implementing of the Code Groupby for better and less of Code in the Dataframe
-#### - Implementing pd.tonumeric function for less of code and putting Markers on the Line Graph
+#### - v1.2 Adding 'encoding='ISO-8859-1' to the read the data set this was figured out by using chatgpt
+#### - v1.3 Reivions of the code in the Overview of Dataset 
+#### - v1.4 Revisions on the Basic Statistics where 'Error Coerce' was added to translate the string into numeric type. This was figured out by using ChatGPT
+#### - v1.5 Revision of the plots on Released_year and artist count and making it subplots instead of 1 by 1 of plots
+#### - v1.6 Adding how to get the Outliers
+#### - v1.7 Determining and implementing of the Code Groupby for better and less of Code in the Dataframe
+#### - v1.8 Implementing pd.tonumeric function for less of code and putting Markers on the Line Graph
+#### - v1.9 Adding  and determining  the use autopct for better visualization of the Pie Graph
+#### - v2.1 Adding startangle function to the pie graph for better visualization for the Pie Graph 
+#### - v2.2 Utilizing the subplots and list to retrieve every top in each Data set
+
+## References/Materials Utilized:
+#### - OpenAI. (2024). ChatGPT [Large language model]. https://chatgpt.com
+#### - https://github.com/jonathannnpstl/top-spotify-songs-2023-EDA/blob/main/top_spotify_songs_eda.ipynb
+
+
+
