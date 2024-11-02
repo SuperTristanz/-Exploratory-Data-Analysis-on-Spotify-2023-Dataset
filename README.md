@@ -81,7 +81,8 @@
 # ![image](https://github.com/user-attachments/assets/7f035a60-212f-4110-aaf4-044be32573ec)
 ### Graph for The 5 most Streamed
 #### Input:
-# ![image](https://github.com/user-attachments/assets/5e4283d6-ccee-420c-882e-ff27114c012d)
+# ![image](https://github.com/user-attachments/assets/ed89537b-7c7f-4e19-a35c-168156c24bed)
+
 #### Bar Plot is used for Better Visualization of the Relationship
 #### Ouput: 
 # ![image](https://github.com/user-attachments/assets/ce7ed88e-cce3-4a0d-befa-2e353bd95b17)
@@ -258,6 +259,7 @@
 #### - v2.1 Adding startangle function to the pie graph for better visualization for the Pie Graph 
 #### - v2.2 Utilizing the subplots and list to retrieve every top in each Data set
 #### - v2.3 Making changes to the Popularity of the charts
+#### - v2.4 changes to Variable Names
 
 ## References/Materials Utilized:
 #### - OpenAI. (2024). ChatGPT [Large language model]. https://chatgpt.com
