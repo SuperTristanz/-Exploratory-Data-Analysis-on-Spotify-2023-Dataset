@@ -165,18 +165,21 @@
 ## Platform Popularity
 ### Which platform seems to favor the most popular tracks
 ####  Input:
-# ![image](https://github.com/user-attachments/assets/98f490b1-d838-4b43-8dce-35963d960048)
-#### - The code snippet gives the total track count of particular music platforms where ‘total’ counts total tracks in Spotify Playlists, Spotify Charts, Apple Playlists, all listed in the DataFrame df. It then adds a total by each platform separately and stores these to count1, count2, and count3. Subsequently, a new DataFrame named plat_res is created, which contains two columns: The DSTs used are ‘platform’ in which the names of the aforementioned platforms have been listed, and ‘track_count’, which displays the total count of instances pertaining to the stated platforms. This resulting data frame gives a simplified view and quantification of how many tracks are covered across the given music platforms.
+# ![image](https://github.com/user-attachments/assets/d4c14819-7114-4c34-a67e-a578c2489ca3)
+#### - The code snippet gives the total track count of particular music platforms where ‘total’ counts total tracks in Spotify Playlists, Deezers Playlist, Apple Playlists, all listed in the DataFrame df. It then adds a total by each platform separately and stores these to count1, count2, and count3. Subsequently, a new DataFrame named plat_res is created, which contains two columns: The DSTs used are ‘platform’, in which the names of the platforms mentioned above have been listed, and ‘track_count,’ which displays the total count of instances about the stated platforms. This resulting data frame gives a simplified view and quantification of how many tracks are covered across the given music platforms.
 
 #### Output:
-# ![image](https://github.com/user-attachments/assets/bc3e17b9-9f32-4de2-a89f-b15ac176193d)
+# ![image](https://github.com/user-attachments/assets/2be012af-23b0-4f60-a7b9-385200afbf19)
+
 
 ### Graph on Which platform favor most of the Tracks
 #### Input:
-# ![image](https://github.com/user-attachments/assets/c47780a7-a5be-4835-9fe6-08d0e8e30174)
+# ![image](https://github.com/user-attachments/assets/d31bf5db-edfd-4e57-a3e4-ad52f6e50b21)
+
 #### - We use Barplots for better Visualization of the Graph
 #### Output:
-# ![image](https://github.com/user-attachments/assets/e966c884-ed14-46fe-9866-b520d40cddf8)
+# ![image](https://github.com/user-attachments/assets/e9ff6ae4-5884-477d-bfbc-84414ccef6a6)
+
 #### - Based on the Graph It is Clearly stated that in Spotify playlist in the one who favor Most of the Tracks
 
 ## Advanced Analysis
@@ -253,6 +256,7 @@
 #### - v1.9 Adding  and determining  the use autopct for better visualization of the Pie Graph
 #### - v2.1 Adding startangle function to the pie graph for better visualization for the Pie Graph 
 #### - v2.2 Utilizing the subplots and list to retrieve every top in each Data set
+#### - v2.3 Making changes to the Popularity of the charts
 
 ## References/Materials Utilized:
 #### - OpenAI. (2024). ChatGPT [Large language model]. https://chatgpt.com
