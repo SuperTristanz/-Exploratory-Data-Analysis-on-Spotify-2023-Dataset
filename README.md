@@ -165,7 +165,8 @@
 ## Platform Popularity
 ### Which platform seems to favor the most popular tracks
 ####  Input:
-# ![image](https://github.com/user-attachments/assets/d4c14819-7114-4c34-a67e-a578c2489ca3)
+# ![image](https://github.com/user-attachments/assets/512a8edc-db8e-42d3-acbd-843996698608)
+
 #### - The code snippet gives the total track count of particular music platforms where ‘total’ counts total tracks in Spotify Playlists, Deezers Playlist, Apple Playlists, all listed in the DataFrame df. It then adds a total by each platform separately and stores these to count1, count2, and count3. Subsequently, a new DataFrame named plat_res is created, which contains two columns: The DSTs used are ‘platform’, in which the names of the platforms mentioned above have been listed, and ‘track_count,’ which displays the total count of instances about the stated platforms. This resulting data frame gives a simplified view and quantification of how many tracks are covered across the given music platforms.
 
 #### Output:
