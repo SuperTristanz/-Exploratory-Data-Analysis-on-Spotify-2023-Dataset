@@ -218,25 +218,50 @@
 #### - The PieGraph shows that the dominant mode in terms of number of Tracks is Major
 
 ### Artists consistently appear in more playlists or charts
-#### Input:
-# ![image](https://github.com/user-attachments/assets/e0a5e56d-f171-42b2-8e44-974fbf8fcea7)
-#### - The code snippet calculates the total number of tracks for each artist across multiple platforms, specifically focusing on Spotify playlists, Spotify charts, and Apple playlists. It begins by grouping the DataFrame df by the 'artist(s)_name' column and summing the counts for 'in_spotify_playlists', 'in_spotify_charts', and 'in_apple_playlists', resulting in three separate DataFrames: artist_playlist_counts, artist_chart_counts, and artist_apple_counts. These individual DataFrames are then merged into a single DataFrame, artist_counts, using the merge() function, which combines them based on the common 'artist(s)_name' column, with suffixes added for clarity. After renaming the 'in_apple_playlists' column for better understanding, the resulting DataFrame is sorted in Highest order based on the total count of tracks in Spotify playlists.
-#### Output:
-# ![image](https://github.com/user-attachments/assets/f09062fe-0390-4f0c-ae60-dc590413bc6e)
+#### Input/s:
+#### Spotify Playlists
+# ![image](https://github.com/user-attachments/assets/0d844bb9-fc18-4200-b112-5e2e9a89bb08)
+
+#### Deezer Playlists
+# ![image](https://github.com/user-attachments/assets/0ca63584-9a24-47b9-a243-d2d0616f9f5f)
+
+#### Apple Playlists
+# ![image](https://github.com/user-attachments/assets/0bc76138-8b13-4cb3-8bb3-3f91eb9f6190)
+
+#### - The code snippet calculates the total number of tracks for each artist across multiple platforms, specifically focusing on Spotify playlists, Deezer, and Apple playlists.
+#### Output/s:
+#### Spotify Playlists
+# ![image](https://github.com/user-attachments/assets/50780f88-9065-4d82-859b-7188496f61d3)
+
+
+#### Deezer Playlists
+# ![image](https://github.com/user-attachments/assets/0e82c29d-7c9d-460a-a258-30e2bea85141)
+
+#### Apple Playlists
+# ![image](https://github.com/user-attachments/assets/06b6b718-79cd-4d74-8438-7409927bdaf9)
 #### - We get A sample of top 10 Artists for all Tracks
 
+
 ### Graphing the Top 10 in each Category of Music (Spotify Playlist, Spotify charts, and Apple Playlist)
-#### Input:
-# ![image](https://github.com/user-attachments/assets/7adeeaa7-06ca-4b49-b30d-70917efd2e82)
-#### - This code targets recognizing and displaying the first ten artists in terms of tracks allowed into Spotify and Apple Music playlists. It first aggregates the original DataFrame, df, by artist names in order to get the total track count for Spotify playlists, Spotify charts, and Apple playlists, using different DataFrames. These DataFrames are then merged to form the DataFrame named artist_counts, which contains the total counts of tracks from all three sources. The code then proceeds to sort these merged results in DataFrame and find the best 10 artists for each platform, producing three separate DataFrame for Spotify playlists, Spotify chart, and Apple playlists. All of these DataFrames then set the index as artist names so that there are no problems with the plot.
+#### Inputs/s:
+#### Spotify Playlists
+# ![image](https://github.com/user-attachments/assets/1590dc6a-99ae-454c-ba05-b9b292b2cd23)
+
+#### Deezer Playlists
+# ![image](https://github.com/user-attachments/assets/5f679b1c-264e-49c8-b7d1-fd8e5b8cbd85)
+
+#### Apple Charts
+# ![image](https://github.com/user-attachments/assets/d9254329-b9e6-4531-90e7-b6576c311018)
+
+#### - This code targets recognizing and displaying the first ten artists in terms of tracks allowed into Spotify, Deezer, and Apple Music playlists.  The code then sorts these results in DataFrame and finds the best ten artists for each platform, producing three separate DataFrame for Spotify playlists, Deezer playlist, and Apple playlists. All of these DataFrames then set the index as artist names so that there are no problems with the plot.
 
 #### - Output:
 ### For Spotify Playlist
 # ![image](https://github.com/user-attachments/assets/84fdfeb8-909a-4bce-9790-a55e961a22ae)
 #### - Number 1 on the Spotify Playlist is The Weekend
 
-### For Spotify Charts
-# ![image](https://github.com/user-attachments/assets/781db078-7e3a-4dbc-8f4c-346f36b8aa5f)
+### For Deezer Playlists
+# ![image](https://github.com/user-attachments/assets/84626351-f637-4da2-b3dd-2907ee7ad121)
 #### - Number 1 on the Spotify Charts is Taylor Swift
 
 ### For Apple Playlist
